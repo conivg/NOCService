@@ -6,6 +6,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import com.nocservice.dto.UserDto;
+
 import javax.persistence.Column;
 
 @Entity
@@ -17,7 +20,7 @@ private Integer code;
 
 @ManyToOne(fetch = FetchType.EAGER)
 @JoinColumn(name= "userTId")
-private UserTypeEntity UserTId;
+private UserTypeEntity userTId;
 
 @Column
 private Integer idTStatus;
@@ -29,6 +32,7 @@ private String email;
 private String password;
 @Column
 private Integer birthday;
+
 public Integer getCode() {
 	return code;
 }
@@ -36,10 +40,10 @@ public void setCode(Integer code) {
 	this.code = code;
 }
 public UserTypeEntity getUserTId() {
-	return UserTId;
+	return userTId;
 }
 public void setUserTId(UserTypeEntity userTId) {
-	UserTId = userTId;
+	this.userTId = userTId;
 }
 public Integer getIdTStatus() {
 	return idTStatus;
