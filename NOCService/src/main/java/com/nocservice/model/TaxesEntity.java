@@ -11,6 +11,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="Taxes_Taxes")
 public class TaxesEntity {
+	
 	@Id
 	private Integer code;
 	

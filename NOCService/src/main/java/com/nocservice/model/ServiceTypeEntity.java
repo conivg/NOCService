@@ -9,7 +9,6 @@ import javax.persistence.Table;
 @Table(name="Servt_Servicetype")
 public class ServiceTypeEntity {
 
-
 @Id
 private Integer code;
 

@@ -9,57 +9,57 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Servi_Service")
+@Table(name = "Servi_Service")
 public class ServiceEntity {
 
-@Id
-private Integer code;
+	@Id
+	private Integer code;
 
-@ManyToOne(fetch = FetchType.EAGER)
-@JoinColumn(name= "ServiceTId")
-private ServiceTypeEntity ServiceTId;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "ServiceTId")
+	private ServiceTypeEntity ServiceTId;
 
-@ManyToOne(fetch = FetchType.EAGER)
-@JoinColumn(name= "UserId")
-private UserEntity UserId;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "UserId")
+	private UserEntity UserId;
 
-@Column
-private String idSucursal;
+	@Column
+	private String idSucursal;
 
-@Column
-private String name;
+	@Column
+	private String name;
 
-@Column
-private String description;
+	@Column
+	private String description;
 
-@Column
-private String address;
+	@Column
+	private String address;
 
-@Column
-private Integer postalCode;
+	@Column
+	private Integer postalCode;
 
-@Column
-private Float price;
+	@Column
+	private Float price;
 
-@ManyToOne(fetch = FetchType.EAGER)
-@JoinColumn(name= "CountryId")
-private GeolocalizationEntity CountryId;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "CountryId")
+	private GeolocalizationEntity CountryId;
 
-@ManyToOne(fetch = FetchType.EAGER)
-@JoinColumn(name= "StateId")
-private GeolocalizationEntity StateId;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "StateId")
+	private GeolocalizationEntity StateId;
 
-@ManyToOne(fetch = FetchType.EAGER)
-@JoinColumn(name= "MunicipalityId")
-private GeolocalizationEntity MunicipalityId;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "MunicipalityId")
+	private GeolocalizationEntity MunicipalityId;
 
-@ManyToOne(fetch = FetchType.EAGER)
-@JoinColumn(name= "CityId")
-private GeolocalizationEntity CityId;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "CityId")
+	private GeolocalizationEntity CityId;
 
-@ManyToOne(fetch = FetchType.EAGER)
-@JoinColumn(name= "SuburbId")
-private GeolocalizationEntity SuburbId;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "SuburbId")
+	private GeolocalizationEntity SuburbId;
 
 //lista de caracteristicas
 

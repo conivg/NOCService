@@ -6,40 +6,39 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Taxet_Taxestype")
+@Table(name = "Taxet_Taxestype")
 public class TaxesTypeEntity {
 
+	@Id
+	private Integer code;
 
-@Id
-private Integer code;
+	@Column
+	private String name;
 
-@Column
-private String name;
+	@Column
+	private String Description;
 
-@Column
-private String Description;
+	public Integer getCode() {
+		return code;
+	}
 
-public Integer getCode() {
-	return code;
-}
+	public void setCode(Integer code) {
+		this.code = code;
+	}
 
-public void setCode(Integer code) {
-	this.code = code;
-}
+	public String getName() {
+		return name;
+	}
 
-public String getName() {
-	return name;
-}
+	public void setName(String name) {
+		this.name = name;
+	}
 
-public void setName(String name) {
-	this.name = name;
-}
+	public String getDescription() {
+		return Description;
+	}
 
-public String getDescription() {
-	return Description;
-}
-
-public void setDescription(String description) {
-	Description = description;
-}
+	public void setDescription(String description) {
+		Description = description;
+	}
 }
